@@ -1,35 +1,31 @@
-### Tittel
+# Laboratorieprøver i FHIR
 
-Introduksjonstekst (husk at dette er en mal, og ALL tekst må endres - dette er kun et eksempel)
+Denne demonstrasjonsguiden viser hvordan en pasient og et laboratorieresultat kan representeres og kobles sammen med HL7 FHIR R4. Eksempelet bruker norske beskrivelser og en hemoglobinmåling kodet med LOINC.
 
-### Mål
+## Mål
 
-Målet med denne implementasjonsguiden er å gi en standardisert måte å representere og utveksle helsedata på ved hjelp av HL7 FHIR. Guiden beskriver hvordan ulike FHIR-profiler og ressurser kan brukes for å oppnå interoperabilitet mellom helsesystemer.
+Målet er å gi et lite, konkret utgangspunkt for å utforske FHIR-profiler, eksempler og publisering av en implementasjonsguide. Innholdet er pedagogisk og er ikke en komplett spesifikasjon for produksjonsbruk.
 
-### Omfang
+## Omfang
 
-Denne implementasjonsguiden dekker følgende områder:
+Guiden avgrenses til to ressurser:
 
-- Pasientadministrasjon
-- Kliniske observasjoner
-- Medisinsk historikk
-- Behandlingsplaner
-- Laboratorieresultater
+- `Patient` beskriver demo-pasienten.
+- `Observation` beskriver et hemoglobinresultat og viser hvordan resultatet refererer til pasienten.
 
-### Brukstilfeller
+Guiden dekker ikke pasientadministrasjon, behandlingsplaner, medisinsk historikk eller andre laboratorieanalyser.
 
-#### Pasientregistrering
+## Eksempel
 
-Denne guiden beskriver hvordan pasienter kan registreres i et helsesystem ved hjelp av FHIR `Patient`-ressursen. Eksempler inkluderer opprettelse, oppdatering og sletting av pasientdata.
+En laboratorietjeneste registrerer en pasient og publiserer deretter en hemoglobinmåling som peker på pasienten. Eksemplet bruker syntetiske opplysninger og en demonstrasjonsidentifikator; det skal ikke brukes som en ekte pasientjournal.
 
-#### Kliniske observasjoner
+Profilene og eksemplene finnes i [artefaktoversikten](artifacts.html):
 
-Guiden viser hvordan kliniske observasjoner som blodtrykk, puls og temperatur kan representeres ved hjelp av FHIR `Observation`-ressursen.
+- `MalPatient` og `Pasient-1`
+- `MalObservationBlood` og `Hemoglobin-1`
 
-### Figur
+## Dataflyt
 
-Eksempel på en figur laget med PlantUML.
+Diagrammet viser koblingen mellom pasienten, laboratorieresultatet og systemene som utveksler ressursene.
 
-<img src="test.svg" width="40%" />
-
-
+![Dataflyt for pasient og laboratorieresultat](test.svg)

@@ -1,23 +1,16 @@
 @startuml
+title Demo: utveksling av laboratorieresultat
 
-' Tittel og bunntekst for diagrammet
-title Eksempel-diagram
-footer Undertekst A
+actor "Laboratoriesystem" as Lab
+participant "FHIR-tjener" as Server
+actor "Konsument" as Consumer
 
-' Klassedefinisjoner med attributter
-class Folk {
-    -Navn : string
-    +Fødselsår : int
-}
-class Sykkel
-class Tastatur
-class Datamaskin {
-    +Svenskeknapp : boolean
-}
-
-' Relasjoner mellom klasser
-Folk <-- Datamaskin : bruker
-Folk <-- Sykkel : eier
-Tastatur --o Datamaskin : består av
+Lab -> Server: Opprett Patient (Pasient-1)
+Lab -> Server: Opprett Observation (Hemoglobin-1)
+note right of Server
+    Observation.subject peker på Patient.
+end note
+Consumer -> Server: Hent laboratorieresultat
+Server --> Consumer: Observation med pasientreferanse
 
 @enduml
