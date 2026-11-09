@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="CaffeineForCoder"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Koffein: 4.2 mg/L. Fiktiv demo-verdi, ikke et klinisk mål.</p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements"/>
+      <code value="caffeine"/>
+      <display value="Caffeine in serum or plasma (demo code)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Pasient-1"/>
+  </subject>
+  <effectiveDateTime value="2026-11-09T08:30:00+01:00"/>
+  <performer>
+    <reference value="Organization/DemoLaboratory"/>
+  </performer>
+  <valueQuantity>
+    <value value="4.2"/>
+    <unit value="mg/L"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mg/L"/>
+  </valueQuantity>
+  <note>
+    <text value="Build-avhengighet bekreftet: kaffe. Verdien er fiktiv, ikke et klinisk mål."/>
+  </note>
+</Observation>

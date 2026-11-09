@@ -6,17 +6,9 @@
 
 ## Example Observation: Hemoglobin-1
 
-Profile: [Blodprøve](StructureDefinition-mal-observation-blodprove.md)
+Hemoglobin: 14.2 g/dL
 
-**status**: Final
-
-**code**: Hemoglobin [Mass/volume] in Blood
-
-**subject**: [Demo Pasient Unknown, DoB: 1980-01-01 ( https://example.org/fhir/NamingSystem/demo-patient-id#DEMO-001)](Patient-Pasient-1.md)
-
-**effective**: 2026-10-15 09:30:00+0200
-
-**value**: 14.2 g/dL (Details: UCUM codeg/dL = 'g/dL')
+Fiktivt demoresultat for Pasient-1.
 
 
 
@@ -41,6 +33,9 @@ Profile: [Blodprøve](StructureDefinition-mal-observation-blodprove.md)
     "reference" : "Patient/Pasient-1"
   },
   "effectiveDateTime" : "2026-10-15T09:30:00+02:00",
+  "performer" : [{
+    "reference" : "Organization/DemoLaboratory"
+  }],
   "valueQuantity" : {
     "value" : 14.2,
     "unit" : "g/dL",

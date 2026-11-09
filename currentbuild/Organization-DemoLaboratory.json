@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Organization",
+  "id" : "DemoLaboratory",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ski og Kaffe Demo-lab</p></div>"
+  },
+  "active" : true,
+  "name" : "Ski og Kaffe Demo-lab"
+}

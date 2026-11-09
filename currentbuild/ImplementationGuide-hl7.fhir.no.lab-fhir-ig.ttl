@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "lab-fhir-ig"] ;
   fhir:ImplementationGuide.title [ fhir:value "Demonstrasjonsguide for laboratorieprøver"] ;
   fhir:ImplementationGuide.status [ fhir:value "draft"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-11-09T10:07:03+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-11-09T10:56:25+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "Helse Vest IKT"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
@@ -410,6 +410,51 @@
          fhir:Extension.valueString [ fhir:value "Observation" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/Observation/CaffeineForCoder> ;
+         fhir:Reference.reference [ fhir:value "Observation/CaffeineForCoder" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CaffeineForCoder" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Demoens koffeinmåling før dagens første kodegjennomgang" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove" ;
+         fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove>
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements> ;
+         fhir:Reference.reference [ fhir:value "CodeSystem/coder-fuel-measurements" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Coder fuel demo measurements" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Local demo codes only; not intended for clinical or interoperable use." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/Organization/DemoLaboratory> ;
+         fhir:Reference.reference [ fhir:value "Organization/DemoLaboratory" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DemoLaboratory" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Fiktivt laboratorium for demo-observasjonene" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 4 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
          fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/Observation/Hemoglobin-1> ;
          fhir:Reference.reference [ fhir:value "Observation/Hemoglobin-1" ]
        ] ;
@@ -420,7 +465,7 @@
          fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove>
        ]
      ], [
-       fhir:index 2 ;
+       fhir:index 5 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -434,7 +479,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Informasjon om pasienten, basert på no-basis." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 3 ;
+       fhir:index 6 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -449,6 +494,23 @@
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-patient" ;
          fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-patient>
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/Observation/VitaminDForSkier> ;
+         fhir:Reference.reference [ fhir:value "Observation/VitaminDForSkier" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "VitaminDForSkier" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Demoens vitamin D-måling for en kollega som søker sol og skiføre" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove" ;
+         fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove>
        ]
      ] ;
      fhir:ImplementationGuide.definition.page [

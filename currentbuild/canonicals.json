@@ -1,4 +1,11 @@
 [{
+  "id" : "coder-fuel-measurements",
+  "type" : "CodeSystem",
+  "url" : "http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements",
+  "version" : "0.1.0",
+  "name" : "CoderFuelCodeSystem"
+},
+{
   "id" : "hl7.fhir.no.lab-fhir-ig",
   "type" : "ImplementationGuide",
   "url" : "http://hl7.no/fhir/ig/lab-fhir-ig/ImplementationGuide/hl7.fhir.no.lab-fhir-ig",

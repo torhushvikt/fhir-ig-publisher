@@ -1,3 +1,10 @@
 {
-  "codeSystems" : []
+  "codeSystems" : [{
+    "url" : "http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "CoderFuelCodeSystem",
+    "title" : "Coder fuel demo measurements",
+    "description" : "Local demo codes only; not intended for clinical or interoperable use."
+  }]
 }

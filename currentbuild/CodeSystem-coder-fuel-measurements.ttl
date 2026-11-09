@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "coder-fuel-measurements"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem coder-fuel-measurements</b></p><a name=\"coder-fuel-measurements\"> </a><a name=\"hccoder-fuel-measurements\"> </a><p>This  code system <code>http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">caffeine<a name=\"coder-fuel-measurements-caffeine\"> </a></td><td>Caffeine in serum or plasma (demo code)</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements"] ;
+  fhir:CodeSystem.version [ fhir:value "0.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "CoderFuelCodeSystem"] ;
+  fhir:CodeSystem.title [ fhir:value "Coder fuel demo measurements"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.date [ fhir:value "2026-11-09T10:56:25+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Helse Vest IKT"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Helse Vest IKT" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.helse-vest-ikt.no" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Local demo codes only; not intended for clinical or interoperable use."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "NO" ] ;
+       fhir:Coding.display [ fhir:value "Norway" ]
+     ]
+  ] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "1"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "caffeine" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Caffeine in serum or plasma (demo code)" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

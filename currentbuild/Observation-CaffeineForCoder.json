@@ -1,0 +1,35 @@
+{
+  "resourceType" : "Observation",
+  "id" : "CaffeineForCoder",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Koffein: 4.2 mg/L. Fiktiv demo-verdi, ikke et klinisk mål.</p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements",
+      "code" : "caffeine",
+      "display" : "Caffeine in serum or plasma (demo code)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/Pasient-1"
+  },
+  "effectiveDateTime" : "2026-11-09T08:30:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/DemoLaboratory"
+  }],
+  "valueQuantity" : {
+    "value" : 4.2,
+    "unit" : "mg/L",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mg/L"
+  },
+  "note" : [{
+    "text" : "Build-avhengighet bekreftet: kaffe. Verdien er fiktiv, ikke et klinisk mål."
+  }]
+}

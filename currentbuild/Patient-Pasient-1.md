@@ -24,7 +24,7 @@ Fødselsdato: 1980-01-01
     "profile" : ["http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-patient"]
   },
   "identifier" : [{
-    "system" : "https://example.org/fhir/NamingSystem/demo-patient-id",
+    "system" : "urn:uuid:00000000-0000-4000-8000-000000000001",
     "value" : "DEMO-001"
   }],
   "name" : [{

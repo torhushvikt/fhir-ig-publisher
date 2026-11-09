@@ -21,7 +21,7 @@
   ] ;
   fhir:Patient.identifier [
      fhir:index 0 ;
-     fhir:Identifier.system [ fhir:value "https://example.org/fhir/NamingSystem/demo-patient-id" ] ;
+     fhir:Identifier.system [ fhir:value "urn:uuid:00000000-0000-4000-8000-000000000001" ] ;
      fhir:Identifier.value [ fhir:value "DEMO-001" ]
   ] ;
   fhir:Patient.name [

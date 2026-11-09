@@ -1,1 +1,2 @@
 URL,Version,Status,OIDs,Name,Title,Description,Used
+http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements,0.1.0,draft,,CoderFuelCodeSystem,Coder fuel demo measurements,"Local demo codes only; not intended for clinical or interoperable use.",

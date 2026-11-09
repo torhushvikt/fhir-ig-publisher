@@ -55,7 +55,7 @@ Diagrammet viser koblingen mellom pasienten, laboratorieresultatet og systemene 
   "name" : "lab-fhir-ig",
   "title" : "Demonstrasjonsguide for laboratorieprøver",
   "status" : "draft",
-  "date" : "2026-11-09T10:07:03+00:00",
+  "date" : "2026-11-09T10:56:25+00:00",
   "publisher" : "Helse Vest IKT",
   "contact" : [{
     "name" : "Helse Vest IKT",
@@ -404,6 +404,54 @@ Diagrammet viser koblingen mellom pasienten, laboratorieresultatet og systemene 
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-CaffeineForCoder.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/CaffeineForCoder"
+      },
+      "name" : "CaffeineForCoder",
+      "description" : "Demoens koffeinmåling før dagens første kodegjennomgang",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-coder-fuel-measurements.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/coder-fuel-measurements"
+      },
+      "name" : "Coder fuel demo measurements",
+      "description" : "Local demo codes only; not intended for clinical or interoperable use.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-DemoLaboratory.html"
+      }],
+      "reference" : {
+        "reference" : "Organization/DemoLaboratory"
+      },
+      "name" : "DemoLaboratory",
+      "description" : "Fiktivt laboratorium for demo-observasjonene",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "Observation-Hemoglobin-1.html"
       }],
       "reference" : {
@@ -444,6 +492,22 @@ Diagrammet viser koblingen mellom pasienten, laboratorieresultatet og systemene 
       "name" : "Pasient-1",
       "description" : "Syntetisk demo-pasient med en demonstrasjonsidentifikator",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-VitaminDForSkier.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/VitaminDForSkier"
+      },
+      "name" : "VitaminDForSkier",
+      "description" : "Demoens vitamin D-måling for en kollega som søker sol og skiføre",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove"
     }],
     "page" : {
       "extension" : [{

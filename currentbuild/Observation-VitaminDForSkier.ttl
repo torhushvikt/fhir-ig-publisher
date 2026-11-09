@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lab-fhir-ig/Observation/VitaminDForSkier> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "VitaminDForSkier"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>25-hydroxyvitamin D: 42 ng/mL. Fiktiv demo-verdi, ikke et klinisk mål.</p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:62292-8 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "62292-8" ] ;
+       fhir:Coding.display [ fhir:value "25-Hydroxyvitamin D3+25-Hydroxyvitamin D2 [Mass/volume] in Serum or Plasma" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/Patient/Pasient-1> ;
+     fhir:Reference.reference [ fhir:value "Patient/Pasient-1" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-11-09T08:30:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.performer [
+     fhir:index 0 ;
+     fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/Organization/DemoLaboratory> ;
+     fhir:Reference.reference [ fhir:value "Organization/DemoLaboratory" ]
+  ] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "42"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "ng/mL" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "ng/mL" ]
+  ] ;
+  fhir:Observation.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Ski- og solkvote registrert. Verdien er fiktiv, ikke et klinisk mål." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lab-fhir-ig/Observation/VitaminDForSkier.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

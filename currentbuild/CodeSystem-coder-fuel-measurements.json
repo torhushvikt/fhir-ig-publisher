@@ -1,0 +1,36 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "coder-fuel-measurements",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem coder-fuel-measurements</b></p><a name=\"coder-fuel-measurements\"> </a><a name=\"hccoder-fuel-measurements\"> </a><p>This  code system <code>http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">caffeine<a name=\"coder-fuel-measurements-caffeine\"> </a></td><td>Caffeine in serum or plasma (demo code)</td></tr></table></div>"
+  },
+  "url" : "http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements",
+  "version" : "0.1.0",
+  "name" : "CoderFuelCodeSystem",
+  "title" : "Coder fuel demo measurements",
+  "status" : "draft",
+  "date" : "2026-11-09T10:56:25+00:00",
+  "publisher" : "Helse Vest IKT",
+  "contact" : [{
+    "name" : "Helse Vest IKT",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.helse-vest-ikt.no"
+    }]
+  }],
+  "description" : "Local demo codes only; not intended for clinical or interoperable use.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 1,
+  "concept" : [{
+    "code" : "caffeine",
+    "display" : "Caffeine in serum or plasma (demo code)"
+  }]
+}

@@ -16,7 +16,7 @@ Profil for vanlige blodprøver
 
 **Usages:**
 
-* Examples for this Profile: [Observation/Hemoglobin-1](Observation-Hemoglobin-1.md)
+* Examples for this Profile: [Observation/CaffeineForCoder](Observation-CaffeineForCoder.md), [Observation/Hemoglobin-1](Observation-Hemoglobin-1.md) and [Observation/VitaminDForSkier](Observation-VitaminDForSkier.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lab-fhir-ig|current/StructureDefinition/StructureDefinition-mal-observation-blodprove.json)
 
@@ -133,6 +133,11 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
       "type" : [{
         "code" : "dateTime"
       }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.performer",
+      "path" : "Observation.performer",
       "mustSupport" : true
     },
     {

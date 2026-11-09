@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lab-fhir-ig/Observation/CaffeineForCoder> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "CaffeineForCoder"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Koffein: 4.2 mg/L. Fiktiv demo-verdi, ikke et klinisk mål.</p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://hl7.no/fhir/ig/lab-fhir-ig/CodeSystem/coder-fuel-measurements" ] ;
+       fhir:Coding.code [ fhir:value "caffeine" ] ;
+       fhir:Coding.display [ fhir:value "Caffeine in serum or plasma (demo code)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/Patient/Pasient-1> ;
+     fhir:Reference.reference [ fhir:value "Patient/Pasient-1" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-11-09T08:30:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.performer [
+     fhir:index 0 ;
+     fhir:link <http://hl7.no/fhir/ig/lab-fhir-ig/Organization/DemoLaboratory> ;
+     fhir:Reference.reference [ fhir:value "Organization/DemoLaboratory" ]
+  ] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "4.2"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "mg/L" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "mg/L" ]
+  ] ;
+  fhir:Observation.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Build-avhengighet bekreftet: kaffe. Verdien er fiktiv, ikke et klinisk mål." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lab-fhir-ig/Observation/CaffeineForCoder.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

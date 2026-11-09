@@ -11,7 +11,7 @@
   <name value="lab-fhir-ig"/>
   <title value="Demonstrasjonsguide for laboratorieprøver"/>
   <status value="draft"/>
-  <date value="2026-11-09T10:07:03+00:00"/>
+  <date value="2026-11-09T10:56:25+00:00"/>
   <publisher value="Helse Vest IKT"/>
   <contact>
     <name value="Helse Vest IKT"/>
@@ -272,6 +272,39 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/CaffeineForCoder"/>
+      </reference>
+      <name value="CaffeineForCoder"/>
+      <description value="Demoens koffeinmåling før dagens første kodegjennomgang"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/coder-fuel-measurements"/>
+      </reference>
+      <name value="Coder fuel demo measurements"/>
+      <description value="Local demo codes only; not intended for clinical or interoperable use."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/DemoLaboratory"/>
+      </reference>
+      <name value="DemoLaboratory"/>
+      <description value="Fiktivt laboratorium for demo-observasjonene"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/Hemoglobin-1"/>
       </reference>
       <name value="Hemoglobin-1"/>
@@ -299,6 +332,17 @@
       <name value="Pasient-1"/>
       <description value="Syntetisk demo-pasient med en demonstrasjonsidentifikator"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/VitaminDForSkier"/>
+      </reference>
+      <name value="VitaminDForSkier"/>
+      <description value="Demoens vitamin D-måling for en kollega som søker sol og skiføre"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

@@ -7,6 +7,10 @@
 
 ## Resources
 
+### CodeSystems
+
+* [Coder fuel demo measurements](CodeSystem-coder-fuel-measurements.md)
+
 ### Resource Profiles
 
 * [Blodprøve](StructureDefinition-mal-observation-blodprove.md)
@@ -18,5 +22,8 @@
 
 ### Examples
 
+* [CaffeineForCoder (Observation)](Observation-CaffeineForCoder.md)
 * [Hemoglobin-1 (Observation)](Observation-Hemoglobin-1.md)
+* [VitaminDForSkier (Observation)](Observation-VitaminDForSkier.md)
+* [Ski og Kaffe Demo-lab (Organization)](Organization-DemoLaboratory.md)
 * [Pasient-1 (Patient)](Patient-Pasient-1.md)

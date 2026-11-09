@@ -10,7 +10,7 @@
   "name" : "lab-fhir-ig",
   "title" : "Demonstrasjonsguide for laboratorieprøver",
   "status" : "draft",
-  "date" : "2026-11-09T10:07:03+00:00",
+  "date" : "2026-11-09T10:56:25+00:00",
   "publisher" : "Helse Vest IKT",
   "contact" : [{
     "name" : "Helse Vest IKT",
@@ -354,6 +354,42 @@
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/CaffeineForCoder"
+      },
+      "name" : "CaffeineForCoder",
+      "description" : "Demoens koffeinmåling før dagens første kodegjennomgang",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/coder-fuel-measurements"
+      },
+      "name" : "Coder fuel demo measurements",
+      "description" : "Local demo codes only; not intended for clinical or interoperable use.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/DemoLaboratory"
+      },
+      "name" : "DemoLaboratory",
+      "description" : "Fiktivt laboratorium for demo-observasjonene",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/Hemoglobin-1"
       },
       "name" : "Hemoglobin-1",
@@ -383,6 +419,18 @@
       "name" : "Pasient-1",
       "description" : "Syntetisk demo-pasient med en demonstrasjonsidentifikator",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/VitaminDForSkier"
+      },
+      "name" : "VitaminDForSkier",
+      "description" : "Demoens vitamin D-måling for en kollega som søker sol og skiføre",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove"
     }],
     "page" : {
       "extension" : [{

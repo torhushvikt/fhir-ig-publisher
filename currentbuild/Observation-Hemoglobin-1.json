@@ -6,7 +6,7 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation Hemoglobin-1</b></p><a name=\"Hemoglobin-1\"> </a><a name=\"hcHemoglobin-1\"> </a><div style=\"display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mal-observation-blodprove.html\">Blodprøve</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 718-7}\">Hemoglobin [Mass/volume] in Blood</span></p><p><b>subject</b>: <a href=\"Patient-Pasient-1.html\">Demo Pasient  Unknown, DoB: 1980-01-01 ( https://example.org/fhir/NamingSystem/demo-patient-id#DEMO-001)</a></p><p><b>effective</b>: 2026-10-15 09:30:00+0200</p><p><b>value</b>: 14.2 g/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeg/dL = 'g/dL')</span></p></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Hemoglobin: 14.2 g/dL</p><p>Fiktivt demoresultat for Pasient-1.</p></div>"
   },
   "status" : "final",
   "code" : {
@@ -20,6 +20,9 @@
     "reference" : "Patient/Pasient-1"
   },
   "effectiveDateTime" : "2026-10-15T09:30:00+02:00",
+  "performer" : [{
+    "reference" : "Organization/DemoLaboratory"
+  }],
   "valueQuantity" : {
     "value" : 14.2,
     "unit" : "g/dL",

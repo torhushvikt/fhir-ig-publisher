@@ -9,7 +9,7 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><strong>Demo Pasient</strong></p><p>Demonstrasjons-ID: DEMO-001</p><p>Fødselsdato: 1980-01-01</p></div>
   </text>
   <identifier>
-    <system value="https://example.org/fhir/NamingSystem/demo-patient-id"/>
+    <system value="urn:uuid:00000000-0000-4000-8000-000000000001"/>
     <value value="DEMO-001"/>
   </identifier>
   <name>
