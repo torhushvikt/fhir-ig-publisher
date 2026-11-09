@@ -1,4 +1,4 @@
-# hl7.fhir.no.mal#0.1.0: Mal
+# hl7.fhir.no.lab-fhir-ig#0.1.0: Demonstrasjonsguide for laboratorieprøver
 
 ## Pages
 
@@ -14,8 +14,9 @@
 
 ### ImplementationGuides
 
-* [Mal](index.md)
+* [Demonstrasjonsguide for laboratorieprøver](index.md)
 
 ### Examples
 
+* [Hemoglobin-1 (Observation)](Observation-Hemoglobin-1.md)
 * [Pasient-1 (Patient)](Patient-Pasient-1.md)

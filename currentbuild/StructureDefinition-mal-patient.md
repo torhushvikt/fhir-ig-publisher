@@ -1,4 +1,4 @@
-# Pasient - Mal v0.1.0
+# Pasient - Demonstrasjonsguide for laboratorieprøver v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient | *Version*:0.1.0 |
+| *Official URL*:http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-patient | *Version*:0.1.0 |
 | Draft as of 2025-01-22 | *Computable Name*:MalPatient |
 
  
@@ -19,7 +19,7 @@ Informasjon om pasienten, basert på no-basis.
 * Refer to this Profile: [Blodprøve](StructureDefinition-mal-observation-blodprove.md)
 * Examples for this Profile: [Patient/Pasient-1](Patient-Pasient-1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.mal|current/StructureDefinition/mal-patient)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lab-fhir-ig|current/StructureDefinition/StructureDefinition-mal-patient.json)
 
 ### Formal Views of Profile Content
 
@@ -37,18 +37,18 @@ Other representations of profile: [CSV](StructureDefinition-mal-patient.csv), [E
 {
   "resourceType" : "StructureDefinition",
   "id" : "mal-patient",
-  "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient",
+  "url" : "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-patient",
   "version" : "0.1.0",
   "name" : "MalPatient",
   "title" : "Pasient",
   "status" : "draft",
   "date" : "2025-01-22",
-  "publisher" : "HL7 Norge",
+  "publisher" : "Helse Vest IKT",
   "contact" : [{
-    "name" : "HL7 Norge",
+    "name" : "Helse Vest IKT",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.hl7.no"
+      "value" : "https://www.helse-vest-ikt.no"
     }]
   }],
   "description" : "Informasjon om pasienten, basert på no-basis.",

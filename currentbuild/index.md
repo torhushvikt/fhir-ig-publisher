@@ -1,4 +1,4 @@
-# Home - Mal v0.1.0
+# Home - Demonstrasjonsguide for laboratorieprøver v0.1.0
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,40 +7,38 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/mal/ImplementationGuide/hl7.fhir.no.mal | *Version*:0.1.0 |
-| Draft as of 2026-03-12 | *Computable Name*:Mal |
+| *Official URL*:http://hl7.no/fhir/ig/lab-fhir-ig/ImplementationGuide/hl7.fhir.no.lab-fhir-ig | *Version*:0.1.0 |
+| Draft as of 2026-11-09 | *Computable Name*:lab-fhir-ig |
 
-### Tittel
+### Laboratorieprøver i FHIR
 
-Introduksjonstekst (husk at dette er en mal, og ALL tekst må endres - dette er kun et eksempel)
+Denne demonstrasjonsguiden viser hvordan en pasient og et laboratorieresultat kan representeres og kobles sammen med HL7 FHIR R4. Eksempelet bruker norske beskrivelser og en hemoglobinmåling kodet med LOINC.
 
-### Mål
+#### Mål
 
-Målet med denne implementasjonsguiden er å gi en standardisert måte å representere og utveksle helsedata på ved hjelp av HL7 FHIR. Guiden beskriver hvordan ulike FHIR-profiler og ressurser kan brukes for å oppnå interoperabilitet mellom helsesystemer.
+Målet er å gi et lite, konkret utgangspunkt for å utforske FHIR-profiler, eksempler og publisering av en implementasjonsguide. Innholdet er pedagogisk og er ikke en komplett spesifikasjon for produksjonsbruk.
 
-### Omfang
+#### Omfang
 
-Denne implementasjonsguiden dekker følgende områder:
+Guiden avgrenses til to ressurser:
 
-* Pasientadministrasjon
-* Kliniske observasjoner
-* Medisinsk historikk
-* Behandlingsplaner
-* Laboratorieresultater
+* `Patient` beskriver demo-pasienten.
+* `Observation` beskriver et hemoglobinresultat og viser hvordan resultatet refererer til pasienten.
 
-### Brukstilfeller
+Guiden dekker ikke pasientadministrasjon, behandlingsplaner, medisinsk historikk eller andre laboratorieanalyser.
 
-#### Pasientregistrering
+#### Eksempel
 
-Denne guiden beskriver hvordan pasienter kan registreres i et helsesystem ved hjelp av FHIR `Patient`-ressursen. Eksempler inkluderer opprettelse, oppdatering og sletting av pasientdata.
+En laboratorietjeneste registrerer en pasient og publiserer deretter en hemoglobinmåling som peker på pasienten. Eksemplet bruker syntetiske opplysninger og en demonstrasjonsidentifikator; det skal ikke brukes som en ekte pasientjournal.
 
-#### Kliniske observasjoner
+Profilene og eksemplene finnes i [artefaktoversikten](artifacts.md):
 
-Guiden viser hvordan kliniske observasjoner som blodtrykk, puls og temperatur kan representeres ved hjelp av FHIR `Observation`-ressursen.
+* `MalPatient` og `Pasient-1`
+* `MalObservationBlood` og `Hemoglobin-1`
 
-### Figur
+#### Dataflyt
 
-Eksempel på en figur laget med PlantUML.
+Diagrammet viser koblingen mellom pasienten, laboratorieresultatet og systemene som utveksler ressursene.
 
 ![](test.svg)
 
@@ -51,22 +49,22 @@ Eksempel på en figur laget med PlantUML.
 ```json
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.no.mal",
-  "url" : "http://hl7.no/fhir/ig/mal/ImplementationGuide/hl7.fhir.no.mal",
+  "id" : "hl7.fhir.no.lab-fhir-ig",
+  "url" : "http://hl7.no/fhir/ig/lab-fhir-ig/ImplementationGuide/hl7.fhir.no.lab-fhir-ig",
   "version" : "0.1.0",
-  "name" : "Mal",
-  "title" : "Mal",
+  "name" : "lab-fhir-ig",
+  "title" : "Demonstrasjonsguide for laboratorieprøver",
   "status" : "draft",
-  "date" : "2026-03-12T13:22:38+00:00",
-  "publisher" : "HL7 Norge",
+  "date" : "2026-11-09T10:07:03+00:00",
+  "publisher" : "Helse Vest IKT",
   "contact" : [{
-    "name" : "HL7 Norge",
+    "name" : "Helse Vest IKT",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.hl7.no"
+      "value" : "https://www.helse-vest-ikt.no"
     }]
   }],
-  "description" : "Implementasjonsguide for å TODO",
+  "description" : "Demo av hvordan en pasient og et hemoglobinresultat kan representeres med FHIR R4.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -74,7 +72,7 @@ Eksempel på en figur laget med PlantUML.
       "display" : "Norway"
     }]
   }],
-  "packageId" : "hl7.fhir.no.mal",
+  "packageId" : "hl7.fhir.no.lab-fhir-ig",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [{
@@ -85,7 +83,7 @@ Eksempel på en figur laget med PlantUML.
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.1.0"
+    "version" : "7.5.0"
   },
   {
     "id" : "hl7ext",
@@ -95,7 +93,7 @@ Eksempel på en figur laget med PlantUML.
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.2.0"
+    "version" : "5.4.0"
   },
   {
     "id" : "hl7_fhir_no_basis",
@@ -105,283 +103,8 @@ Eksempel på en figur laget med PlantUML.
   }],
   "definition" : {
     "extension" : [{
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "copyrightyear"
-      },
-      {
-        "url" : "value",
-        "valueString" : "2026+"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "releaselabel"
-      },
-      {
-        "url" : "value",
-        "valueString" : "ci-build"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "autoload-resources"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-liquid"
-      },
-      {
-        "url" : "value",
-        "valueString" : "template/liquid"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-liquid"
-      },
-      {
-        "url" : "value",
-        "valueString" : "input/liquid"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-qa"
-      },
-      {
-        "url" : "value",
-        "valueString" : "temp/qa"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-temp"
-      },
-      {
-        "url" : "value",
-        "valueString" : "temp/pages"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-output"
-      },
-      {
-        "url" : "value",
-        "valueString" : "output"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-suppressed-warnings"
-      },
-      {
-        "url" : "value",
-        "valueString" : "input/ignoreWarnings.txt"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-history"
-      },
-      {
-        "url" : "value",
-        "valueString" : "http://hl7.no/fhir/ig/mal/history.html"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "template-html"
-      },
-      {
-        "url" : "value",
-        "valueString" : "template-page.html"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "template-md"
-      },
-      {
-        "url" : "value",
-        "valueString" : "template-page-md.html"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-contact"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-context"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-copyright"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-jurisdiction"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-license"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-publisher"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-version"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-wg"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "active-tables"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "fmm-definition"
-      },
-      {
-        "url" : "value",
-        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "propagate-status"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "excludelogbinaryformat"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "tabbed-snapshots"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.3.0"
     },
     {
       "extension" : [{
@@ -489,7 +212,7 @@ Eksempel på en figur laget med PlantUML.
       },
       {
         "url" : "value",
-        "valueString" : "http://hl7.no/fhir/ig/mal/history.html"
+        "valueString" : "http://hl7.no/fhir/ig/lab-fhir-ig/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -662,6 +385,10 @@ Eksempel på en figur laget med PlantUML.
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-mal-observation-blodprove.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/mal-observation-blodprove"
@@ -673,7 +400,27 @@ Eksempel på en figur laget med PlantUML.
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-Hemoglobin-1.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/Hemoglobin-1"
+      },
+      "name" : "Hemoglobin-1",
+      "description" : "Syntetisk hemoglobinresultat for demo-pasienten",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-mal-patient.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/mal-patient"
@@ -686,13 +433,17 @@ Eksempel på en figur laget med PlantUML.
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-Pasient-1.html"
       }],
       "reference" : {
         "reference" : "Patient/Pasient-1"
       },
       "name" : "Pasient-1",
-      "description" : "Eksempel på norsk pasient med fødselsnummer, navn og kontaktinformasjon",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient"
+      "description" : "Syntetisk demo-pasient med en demonstrasjonsidentifikator",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-patient"
     }],
     "page" : {
       "extension" : [{

@@ -1,4 +1,4 @@
-# Artifacts Summary - Mal v0.1.0
+# Artifacts Summary - Demonstrasjonsguide for laboratorieprøver v0.1.0
 
 * [**Table of Contents**](toc.md)
 * **Artifacts Summary**
@@ -22,5 +22,6 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
-| [Pasient-1](Patient-Pasient-1.md) | Eksempel på norsk pasient med fødselsnummer, navn og kontaktinformasjon |
+| [Hemoglobin-1](Observation-Hemoglobin-1.md) | Syntetisk hemoglobinresultat for demo-pasienten |
+| [Pasient-1](Patient-Pasient-1.md) | Syntetisk demo-pasient med en demonstrasjonsidentifikator |
 

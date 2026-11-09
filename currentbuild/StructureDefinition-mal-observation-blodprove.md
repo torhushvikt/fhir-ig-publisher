@@ -1,4 +1,4 @@
-# Blodprøve - Mal v0.1.0
+# Blodprøve - Demonstrasjonsguide for laboratorieprøver v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/mal/StructureDefinition/mal-observation-blodprove | *Version*:0.1.0 |
+| *Official URL*:http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove | *Version*:0.1.0 |
 | Draft as of 2025-01-31 | *Computable Name*:MalObservationBlood |
 
  
@@ -16,9 +16,9 @@ Profil for vanlige blodprøver
 
 **Usages:**
 
-* This Profile is not used by any profiles in this Implementation Guide
+* Examples for this Profile: [Observation/Hemoglobin-1](Observation-Hemoglobin-1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.mal|current/StructureDefinition/mal-observation-blodprove)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lab-fhir-ig|current/StructureDefinition/StructureDefinition-mal-observation-blodprove.json)
 
 ### Formal Views of Profile Content
 
@@ -36,18 +36,18 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
 {
   "resourceType" : "StructureDefinition",
   "id" : "mal-observation-blodprove",
-  "url" : "http://hl7.no/fhir/ig/mal/StructureDefinition/mal-observation-blodprove",
+  "url" : "http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-observation-blodprove",
   "version" : "0.1.0",
   "name" : "MalObservationBlood",
   "title" : "Blodprøve",
   "status" : "draft",
   "date" : "2025-01-31",
-  "publisher" : "HL7 Norge",
+  "publisher" : "Helse Vest IKT",
   "contact" : [{
-    "name" : "HL7 Norge",
+    "name" : "Helse Vest IKT",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.hl7.no"
+      "value" : "https://www.helse-vest-ikt.no"
     }]
   }],
   "description" : "Profil for vanlige blodprøver",
@@ -109,7 +109,7 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
       "path" : "Observation.subject",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.no/fhir/ig/mal/StructureDefinition/mal-patient"]
+        "targetProfile" : ["http://hl7.no/fhir/ig/lab-fhir-ig/StructureDefinition/mal-patient"]
       }]
     },
     {
