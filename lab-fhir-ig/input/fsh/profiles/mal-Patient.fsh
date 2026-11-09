@@ -17,7 +17,7 @@ InstanceOf: MalPatient
 Description: "Syntetisk demo-pasient med en demonstrasjonsidentifikator"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><strong>Demo Pasient</strong></p><p>Demonstrasjons-ID: DEMO-001</p><p>Fødselsdato: 1980-01-01</p></div>"
-* identifier.system = "https://example.org/fhir/NamingSystem/demo-patient-id"
+* identifier.system = "urn:uuid:00000000-0000-4000-8000-000000000001"
 * identifier.value = "DEMO-001"
 * name.family = "Pasient"
 * name.given = "Demo"
